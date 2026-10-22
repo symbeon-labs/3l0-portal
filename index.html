@@ -13,6 +13,29 @@
     header{position:sticky;top:0;z-index:10;background:#0b1220eF;border-bottom:1px solid #293950cc;backdrop-filter:blur(16px);padding-top:env(safe-area-inset-top)}
     .nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:800;letter-spacing:.12em}.mark{width:34px;height:34px;border:1px solid var(--cyan);border-radius:11px;display:grid;place-items:center;color:var(--cyan);font-size:13px;letter-spacing:-.06em}.navlinks{display:flex;gap:24px;align-items:center}.navlinks a{font-size:13px;color:var(--muted);text-decoration:none}.navlinks a:hover{color:var(--ink)}.navlinks .nav-cta{border:1px solid #456078;padding:9px 13px;border-radius:10px;color:var(--ink)}
     .hero{padding:92px 0 76px;display:grid;grid-template-columns:1.12fr .88fr;gap:56px;align-items:center}.eyebrow{color:var(--cyan);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:750}.hero h1{font-size:clamp(40px,6vw,72px);line-height:1.04;letter-spacing:-.055em;margin:18px 0 22px;max-width:760px}.hero h1 span{color:var(--cyan)}.lead{font-size:clamp(17px,2vw,20px);line-height:1.65;color:#c0ccdc;max-width:650px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 17px;border-radius:11px;text-decoration:none;font-weight:700;font-size:14px;border:1px solid #40536d}.btn.primary{background:var(--cyan);color:#07131e;border-color:var(--cyan)}.btn.secondary{background:#101b2b;color:var(--ink)}.note{color:#8fa0b7;font-size:12px;margin-top:16px}
+    .phone-demo{display:flex;justify-content:center;position:relative;z-index:1;padding:2px 0 8px}
+    .phone{width:min(100%,340px);border:7px solid #263449;border-radius:38px;background:#070e18;box-shadow:0 25px 70px #0007,inset 0 0 0 1px #60758a;overflow:hidden;position:relative}
+    .phone:before{content:"";position:absolute;z-index:2;top:7px;left:50%;transform:translateX(-50%);width:82px;height:17px;border-radius:20px;background:#263449}
+    .phone-screen{padding:34px 16px 17px;min-height:465px;background:radial-gradient(ellipse at 50% 0%,#173149,transparent 48%),#0a1422}
+    .phone-top{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:10px;color:#9aadc4;letter-spacing:.08em}
+    .phone-brand{display:flex;align-items:center;gap:7px;font-weight:800;color:#eaf5ff;letter-spacing:.1em}.phone-brand b{display:grid;place-items:center;width:23px;height:23px;border:1px solid var(--cyan);border-radius:8px;color:var(--cyan);font-size:9px}
+    .phone-progress{display:flex;gap:5px;margin:20px 0 18px}.phone-progress button{height:4px;flex:1;padding:0;border:0;border-radius:5px;background:#2a3b50;cursor:pointer}.phone-progress button[aria-current="step"]{background:var(--cyan)}
+    .phone-kicker{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--cyan);font-weight:800}
+    .phone-screen h3{font-size:24px;line-height:1.12;letter-spacing:-.04em;margin:8px 0 8px}.phone-copy{font-size:12px;line-height:1.55;color:#aebed0;margin:0 0 16px}
+    .demo-art{min-height:166px;border:1px solid #2a4058;border-radius:16px;background:linear-gradient(145deg,#14283b,#0c1727);display:grid;place-items:center;padding:15px;overflow:hidden;position:relative}
+    .demo-art:after{content:"";position:absolute;width:150px;height:150px;border:1px solid #6be2e81c;border-radius:50%;right:-62px;top:-75px;box-shadow:0 0 0 22px #6be2e809}
+    .product-visual{display:flex;align-items:center;gap:14px;position:relative;z-index:1;width:100%}
+    .bottle{width:66px;height:112px;border:1px solid #76a9b0;border-radius:13px 13px 10px 10px;background:linear-gradient(90deg,#184653,#28717a 45%,#163a4a);position:relative;box-shadow:inset 0 0 0 5px #ffffff08;flex:none}
+    .bottle:before{content:"";position:absolute;width:27px;height:15px;top:-13px;left:19px;border:1px solid #76a9b0;border-radius:4px 4px 1px 1px;background:#172d3b}
+    .bottle:after{content:"3L0\A SAMPLE";white-space:pre;position:absolute;left:6px;right:6px;top:39px;text-align:center;font-size:8px;line-height:1.6;font-weight:800;color:#b9f5f3;letter-spacing:.08em}
+    .art-data{min-width:0;display:grid;gap:8px;flex:1}.data-line{height:7px;border-radius:5px;background:#3b5067;width:90%}.data-line.short{width:58%}.data-label{font-size:9px;color:#91a9c2;text-transform:uppercase;letter-spacing:.1em}
+    .scan-frame{width:100%;max-width:210px;position:relative;z-index:1;border:1px solid #416176;border-radius:12px;padding:16px;background:#0a1421}
+    .scan-code{height:54px;background:repeating-linear-gradient(90deg,#e2f7f8 0 2px,transparent 2px 5px,#e2f7f8 5px 6px,transparent 6px 10px);opacity:.9;margin-bottom:10px}
+    .scan-caption{font-size:10px;color:#a9bdd0;display:flex;justify-content:space-between;gap:8px}
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;position:relative;z-index:1}.compare-box{border:1px solid #324961;background:#0b1625;border-radius:10px;padding:10px}.compare-box small{display:block;color:#91a6be;font-size:9px}.compare-box strong{display:block;font-size:11px;margin:6px 0}.match{color:var(--green)}.mismatch{color:#f0c98a}
+    .review-box{width:100%;position:relative;z-index:1;border:1px solid #7a6544;background:#2a241b;border-radius:11px;padding:13px}.review-box strong{font-size:11px;color:#f3d39a}.review-box p{font-size:10px;color:#d6c7ad;margin:5px 0 10px}.review-actions{display:flex;gap:7px}.review-actions span{font-size:9px;border:1px solid #8d7856;border-radius:6px;padding:5px 7px;color:#f3dfbd}
+    .ready-card{width:100%;position:relative;z-index:1;border:1px solid #376455;background:#10271f;border-radius:12px;padding:14px}.ready-badge{display:inline-block;font-size:9px;color:#b7ebc8;border:1px solid #4c8066;border-radius:30px;padding:4px 7px}.ready-card strong{display:block;font-size:12px;margin:10px 0 5px}.ready-card p{font-size:10px;color:#b2c9bf;margin:0}.evidence-chip{display:inline-block;margin-top:10px;padding:5px 7px;border-radius:6px;background:#193b30;color:#b7ebc8;font-size:9px}
+    .phone-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:16px}.phone-bottom button{min-height:40px;border:1px solid #3b536b;border-radius:10px;background:#122237;color:#eef6ff;padding:8px 11px;font:700 11px inherit;cursor:pointer}.phone-bottom button.primary{background:var(--cyan);border-color:var(--cyan);color:#07131e}.phone-bottom button:disabled{opacity:.35;cursor:not-allowed}.phone-step-label{font-size:10px;color:#91a6be}.phone-disclaimer{font-size:10px;line-height:1.5;color:#8fa2b9;margin:15px 2px 0}
     .visual{border:1px solid #33465f;background:linear-gradient(145deg,#14243a,#0d1727);border-radius:24px;padding:24px;box-shadow:0 25px 90px #0004;position:relative;overflow:hidden}.visual:before{content:"";position:absolute;width:210px;height:210px;border:1px solid #6be2e81c;border-radius:50%;right:-90px;top:-100px;box-shadow:0 0 0 28px #6be2e80a,0 0 0 56px #6be2e806}.visual-head{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:12px;color:var(--muted);margin-bottom:23px}.status{color:var(--green);border:1px solid #4d7e6555;background:#19372e;padding:5px 9px;border-radius:99px;font-size:11px}.flow{display:grid;gap:10px;position:relative}.step{display:grid;grid-template-columns:42px 1fr auto;gap:13px;align-items:center;padding:14px;background:#0c1727;border:1px solid #2b3d54;border-radius:13px}.step-num{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:#18384a;color:var(--cyan);font-size:12px;font-weight:800}.step strong{display:block;font-size:14px}.step small{display:block;color:var(--muted);font-size:12px;margin-top:2px}.step .arrow{color:#7f94ae;font-size:18px}.visual-foot{border-top:1px solid var(--line);margin-top:18px;padding-top:15px;color:#9fb0c5;font-size:12px}
     section{padding:76px 0;border-top:1px solid #29395088}.section-head{max-width:720px;margin-bottom:34px}.section-head h2{font-size:clamp(28px,4vw,43px);letter-spacing:-.04em;line-height:1.13;margin:12px 0}.section-head p{color:var(--muted);font-size:17px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{padding:23px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(145deg,#121e30,#0e1828)}.card .icon{width:38px;height:38px;border:1px solid #3b6170;background:#15313d;border-radius:11px;display:grid;place-items:center;color:var(--cyan);font-weight:800}.card h3{font-size:18px;margin:17px 0 8px}.card p{font-size:14px;color:var(--muted);margin:0}
     .principle{padding:clamp(25px,5vw,50px);border:1px solid #315163;border-radius:22px;background:linear-gradient(120deg,#122b3a,#111c2e 65%);display:grid;grid-template-columns:1fr .6fr;gap:32px;align-items:center}.principle h2{font-size:clamp(27px,4vw,43px);letter-spacing:-.04em;line-height:1.13;margin:12px 0}.principle p{color:var(--muted);margin-bottom:0}.quote-mark{font-size:clamp(72px,11vw,120px);font-weight:850;line-height:1;color:#6be2e833;text-align:center;letter-spacing:-.1em}
@@ -39,16 +62,27 @@
       <div class="actions"><a class="btn primary" href="#proposta">Conheça a proposta <span aria-hidden="true">↘</span></a><a class="btn secondary" href="#escopo">Ver escopo atual</a></div>
       <p class="note">Visão de produto em desenvolvimento · Escopo e integrações sujeitos a validação.</p>
     </div>
-    <aside class="visual" aria-label="Ilustração conceitual do fluxo de informação">
-      <div class="visual-head"><span>FLUXO DE CONTEXTO</span><span class="status">Revisável por pessoas</span></div>
-      <div class="flow">
-        <div class="step"><span class="step-num">01</span><span><strong>Capturar</strong><small>Produto, código ou documento</small></span><span class="arrow">↘</span></div>
-        <div class="step"><span class="step-num">02</span><span><strong>Interpretar</strong><small>Organizar observações e sinais</small></span><span class="arrow">↘</span></div>
-        <div class="step"><span class="step-num">03</span><span><strong>Relacionar</strong><small>Comparar evidências e registros</small></span><span class="arrow">↘</span></div>
-        <div class="step"><span class="step-num">04</span><span><strong>Revisar exceções</strong><small>Explicitar dúvidas antes da ação</small></span><span class="arrow">↘</span></div>
-        <div class="step"><span class="step-num">05</span><span><strong>Preparar a próxima ação</strong><small>Com contexto para conferência</small></span><span class="arrow">✓</span></div>
+    <aside class="visual" aria-label="Demonstração interativa do fluxo de contexto em um smartphone">
+      <div class="visual-head"><span>EXPERIÊNCIA 3L0</span><span class="status">Demonstração guiada</span></div>
+      <div class="phone-demo">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-top"><span class="phone-brand"><b>3L0</b> CONTEXTO</span><span id="demo-count">01 / 05</span></div>
+            <div class="phone-progress" role="group" aria-label="Escolher etapa da demonstração">
+              <button type="button" aria-label="Etapa 1: Capturar" aria-current="step" data-go="0"></button><button type="button" aria-label="Etapa 2: Interpretar" data-go="1"></button><button type="button" aria-label="Etapa 3: Relacionar" data-go="2"></button><button type="button" aria-label="Etapa 4: Revisar exceções" data-go="3"></button><button type="button" aria-label="Etapa 5: Preparar ação" data-go="4"></button>
+            </div>
+            <div class="phone-kicker" id="demo-kicker">01 · OBSERVAÇÃO</div>
+            <h3 id="demo-title">Comece pelo mundo real.</h3>
+            <p class="phone-copy" id="demo-copy">Uma pessoa recebe um produto. O 3L0 parte dos sinais observáveis, sem assumir ainda qual registro representa aquele item.</p>
+            <div class="demo-art" id="demo-art" aria-live="polite">
+              <div class="product-visual"><div class="bottle" role="img" aria-label="Ilustração esquemática de uma embalagem"></div><div class="art-data"><span class="data-label">Objeto observado</span><span class="data-line"></span><span class="data-line short"></span><span class="data-label">Código visível</span><span class="data-line short"></span></div></div>
+            </div>
+            <div class="phone-bottom"><button type="button" id="demo-prev" disabled>← Anterior</button><span class="phone-step-label" id="demo-step-label">Captura</span><button type="button" class="primary" id="demo-next">Próxima →</button></div>
+            <p class="phone-disclaimer">Cenário ilustrativo. As telas demonstram conceitos, não uma integração operacional em tempo real.</p>
+          </div>
+        </div>
       </div>
-      <div class="visual-foot">Fluxo conceitual de referência — não representa uma integração completa em produção.</div>
+      <div class="visual-foot">Explore as etapas por toque. Cada tela mostra como a informação ganha contexto antes da ação.</div>
     </aside>
   </div>
 
@@ -89,4 +123,40 @@
   <section class="closing"><div class="wrap"><div class="eyebrow">A direção</div><h2>Contexto confiável antes da automação.</h2><p>O próximo passo é validar o fluxo inicial de recebimento com evidências físicas, documento e representação empresarial, mantendo a saída revisável antes de qualquer escrita em sistemas externos.</p><span class="btn secondary" aria-label="Estado do projeto">Em desenvolvimento · validação em andamento</span></div></section>
 </main>
 <footer><div class="wrap foot"><span>© 2026 Symbeon Labs · 3L0 Vision</span><span>Visão de produto em desenvolvimento · Capacidades sujeitas a validação.</span></div></footer>
+
+<script>
+(function(){
+  const root = document.querySelector('.phone-demo');
+  if (!root) return;
+  const stages = [
+    {kicker:'01 · OBSERVAÇÃO',title:'Comece pelo mundo real.',copy:'Uma pessoa recebe um produto. O 3L0 parte dos sinais observáveis, sem assumir ainda qual registro representa aquele item.',label:'Captura',art:'<div class="product-visual"><div class="bottle" role="img" aria-label="Ilustração esquemática de uma embalagem"></div><div class="art-data"><span class="data-label">Objeto observado</span><span class="data-line"></span><span class="data-line short"></span><span class="data-label">Código visível</span><span class="data-line short"></span></div></div>'},
+    {kicker:'02 · INTERPRETAÇÃO',title:'Organize os sinais.',copy:'Código, descrição e documento viram observações estruturadas. Uma interpretação ajuda a organizar os dados, mas não transforma uma hipótese em fato confirmado.',label:'Interpretação',art:'<div class="scan-frame"><div class="scan-code" role="img" aria-label="Código de barras ilustrativo"></div><div class="scan-caption"><span>EAN · exemplo</span><span style="color:#6be2e8">LIDO</span></div><div class="data-line" style="margin-top:13px;width:94%"></div><div class="data-line short" style="margin-top:7px"></div></div>'},
+    {kicker:'03 · RESOLUÇÃO',title:'Compare antes de concluir.',copy:'As observações são comparadas com registros candidatos. Dados que coincidem e dados que divergem ficam visíveis para sustentar a resolução.',label:'Relacionamento',art:'<div class="compare"><div class="compare-box"><small>OBSERVADO</small><strong>Suco 1 L</strong><span class="match" style="font-size:10px">✓ Código compatível</span><div class="data-line short" style="margin-top:9px"></div></div><div class="compare-box"><small>REGISTRO</small><strong>Suco integral</strong><span class="mismatch" style="font-size:10px">! Nome divergente</span><div class="data-line" style="margin-top:9px;width:78%"></div></div></div>'},
+    {kicker:'04 · EXCEÇÃO',title:'Deixe a dúvida explícita.',copy:'Quando a descrição não corresponde integralmente, o sistema não deve forçar uma certeza. A divergência vira uma exceção revisável por uma pessoa.',label:'Revisão humana',art:'<div class="review-box"><strong>⚠ Divergência identificada</strong><p>Descrição do produto diferente da referência. Confirme antes de prosseguir.</p><div class="review-actions"><span>Conferir evidência</span><span>Manter pendente</span></div></div>'},
+    {kicker:'05 · PRÓXIMA AÇÃO',title:'Prepare uma ação com contexto.',copy:'Após a conferência, o resultado pode reunir estado, justificativa e evidências para a próxima etapa. A demonstração não grava dados em um ERP.',label:'Saída revisável',art:'<div class="ready-card"><span class="ready-badge">ESTADO ILUSTRATIVO</span><strong>Correspondência revisada</strong><p>Dados comparados · divergência reconhecida · revisão registrada no cenário.</p><span class="evidence-chip">✓ Evidências resumidas</span></div>'}
+  ];
+  let current = 0;
+  const $ = id => document.getElementById(id);
+  const buttons = Array.from(root.querySelectorAll('[data-go]'));
+  function render(index){
+    current = Math.max(0, Math.min(stages.length-1, index));
+    const s = stages[current];
+    $('demo-count').textContent = String(current+1).padStart(2,'0')+' / 05';
+    $('demo-kicker').textContent = s.kicker;
+    $('demo-title').textContent = s.title;
+    $('demo-copy').textContent = s.copy;
+    $('demo-step-label').textContent = s.label;
+    $('demo-art').innerHTML = s.art;
+    $('demo-prev').disabled = current === 0;
+    $('demo-next').disabled = current === stages.length-1;
+    $('demo-next').textContent = current === stages.length-1 ? 'Concluído ✓' : 'Próxima →';
+    buttons.forEach((b,i)=>{if(i===current)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});
+  }
+  buttons.forEach(b=>b.addEventListener('click',()=>render(Number(b.dataset.go))));
+  $('demo-prev').addEventListener('click',()=>render(current-1));
+  $('demo-next').addEventListener('click',()=>render(current===stages.length-1?0:current+1));
+  render(0);
+})();
+</script>
+
 </body></html>
