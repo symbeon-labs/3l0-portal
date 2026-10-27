@@ -3,8 +3,8 @@
   <g fill="#f7f9fb">
     <text x="0" y="67" font-family="Inter,Arial,sans-serif" font-size="76" font-weight="650" letter-spacing="-4">3L</text>
   </g>
-  <!-- The ring is positioned to the right of the 3L lettering, sharing one circular center. -->
-  <g transform="translate(128 30)" fill="none" stroke-width="11" stroke-linecap="round">
+  <!-- Ring optically centered closer to the lettering; four arcs share one circular geometry. -->
+  <g transform="translate(110 30)" fill="none" stroke-width="11" stroke-linecap="round">
     <path d="M0 22 A28 28 0 0 1 22 0" stroke="#00c8f5"/>
     <path d="M43 0 A28 28 0 0 1 65 22" stroke="#65f34d"/>
     <path d="M65 43 A28 28 0 0 1 43 65" stroke="#ffca28"/>
