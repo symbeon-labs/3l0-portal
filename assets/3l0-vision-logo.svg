@@ -3,12 +3,12 @@
   <g fill="#f7f9fb">
     <text x="0" y="67" font-family="Inter,Arial,sans-serif" font-size="76" font-weight="650" letter-spacing="-4">3L</text>
   </g>
-  <!-- Four equally sized arcs share the exact same circular center and radius. -->
-  <g fill="none" stroke-width="11" stroke-linecap="round">
-    <path d="M 13.4 18.5 A 27 27 0 0 1 32.5 10" stroke="#00c8f5"/>
-    <path d="M 32.5 10 A 27 27 0 0 1 51.6 18.5" stroke="#65f34d" transform="translate(0 0)"/>
-    <path d="M 51.6 46.5 A 27 27 0 0 1 32.5 55" stroke="#ffca28"/>
-    <path d="M 32.5 55 A 27 27 0 0 1 13.4 46.5" stroke="#ff493e"/>
+  <!-- The ring is positioned to the right of the 3L lettering, sharing one circular center. -->
+  <g transform="translate(128 30)" fill="none" stroke-width="11" stroke-linecap="round">
+    <path d="M0 22 A28 28 0 0 1 22 0" stroke="#00c8f5"/>
+    <path d="M43 0 A28 28 0 0 1 65 22" stroke="#65f34d"/>
+    <path d="M65 43 A28 28 0 0 1 43 65" stroke="#ffca28"/>
+    <path d="M22 65 A28 28 0 0 1 0 43" stroke="#ff493e"/>
   </g>
   <text x="2" y="104" fill="#f7f9fb" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="400" letter-spacing="10">VISION</text>
 </svg>
