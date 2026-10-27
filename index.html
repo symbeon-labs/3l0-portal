@@ -13,7 +13,7 @@
     *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#17304a 0,transparent 42%),var(--bg);color:var(--ink);font:16px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
     a{color:inherit}a:focus-visible,summary:focus-visible{outline:3px solid var(--cyan);outline-offset:4px} .wrap{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
     header{position:sticky;top:0;z-index:10;background:#0b1220eF;border-bottom:1px solid #293950cc;backdrop-filter:blur(16px);padding-top:env(safe-area-inset-top)}
-    .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:inline-flex;align-items:center;text-decoration:none;flex:none}.brand-logo{display:block;width:170px;height:auto;max-height:none}.navlinks{display:flex;gap:24px;align-items:center}.navlinks a{font-size:13px;color:var(--muted);text-decoration:none}.navlinks a:hover{color:var(--ink)}.navlinks .nav-cta{border:1px solid #456078;padding:9px 13px;border-radius:10px;color:var(--ink)}
+    .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:inline-flex;align-items:center;text-decoration:none;flex:none;min-width:0}.brand-logo{display:block;width:170px;height:auto;max-height:none}.navlinks{display:flex;gap:24px;align-items:center}.navlinks a{font-size:13px;color:var(--muted);text-decoration:none}.navlinks a:hover{color:var(--ink)}.navlinks .nav-cta{border:1px solid #456078;padding:9px 13px;border-radius:10px;color:var(--ink)}
     .hero{padding:92px 0 76px;display:grid;grid-template-columns:1.12fr .88fr;gap:56px;align-items:center}.eyebrow{color:var(--cyan);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:750}.hero h1{font-size:clamp(40px,6vw,72px);line-height:1.04;letter-spacing:-.055em;margin:18px 0 22px;max-width:760px}.hero h1 span{color:var(--cyan)}.lead{font-size:clamp(17px,2vw,20px);line-height:1.65;color:#c0ccdc;max-width:650px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 17px;border-radius:11px;text-decoration:none;font-weight:700;font-size:14px;border:1px solid #40536d}.btn.primary{background:var(--cyan);color:#07131e;border-color:var(--cyan)}.btn.secondary{background:#101b2b;color:var(--ink)}.note{color:#8fa0b7;font-size:12px;margin-top:16px}
     .phone-demo{display:flex;justify-content:center;position:relative;z-index:1;padding:2px 0 8px}
     .phone{width:min(100%,340px);border:7px solid #263449;border-radius:38px;background:#070e18;box-shadow:0 25px 70px #0007,inset 0 0 0 1px #60758a;overflow:hidden;position:relative}
@@ -46,8 +46,9 @@
     .closing{padding:60px 0 86px;text-align:center}.closing h2{font-size:clamp(30px,5vw,48px);letter-spacing:-.04em;line-height:1.12;max-width:760px;margin:13px auto}.closing p{color:var(--muted);max-width:620px;margin:15px auto 24px}
     footer{border-top:1px solid var(--line);padding:25px 0 calc(25px + env(safe-area-inset-bottom));color:#8293a9;font-size:12px}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.foot a{color:#b8c7d9;text-decoration:none}
     @media(max-width:800px){.wrap{width:min(100% - 32px,var(--max))}.nav{min-height:62px}.navlinks{gap:14px}.navlinks a{font-size:12px}.navlinks a:nth-child(2){display:none}.hero{grid-template-columns:1fr;gap:34px;padding:62px 0 54px}.visual{padding:18px}.grid3{grid-template-columns:1fr}.card{padding:20px}.principle{grid-template-columns:1fr}.quote-mark{display:none}.steps{grid-template-columns:1fr 1fr;row-gap:23px}.phase:last-child{grid-column:1/-1}.scope{grid-template-columns:1fr}section{padding:56px 0}.section-head{margin-bottom:25px}}
-    @media(max-width:420px){.wrap{width:calc(100% - 28px)}.navlinks a:first-child{display:none}.brand{font-size:13px}.hero h1{font-size:42px}.step{grid-template-columns:36px 1fr auto;padding:11px;gap:10px}.step-num{width:32px;height:32px}.step strong{font-size:13px}.step small{font-size:11px}.steps{grid-template-columns:1fr}.phase:last-child{grid-column:auto}.actions .btn{width:100%}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+    @media(max-width:420px){.wrap{width:calc(100% - 28px)}.nav{min-height:66px;gap:10px}.brand-logo{width:124px}.navlinks{gap:8px}.navlinks a{font-size:11px}.navlinks a:first-child,.navlinks a:nth-child(2){display:none}.navlinks .nav-cta{padding:8px 10px;font-size:11px}.hero h1{font-size:42px}.step{grid-template-columns:36px 1fr auto;padding:11px;gap:10px}.step-num{width:32px;height:32px}.step strong{font-size:13px}.step small{font-size:11px}.steps{grid-template-columns:1fr}.phase:last-child{grid-column:auto}.actions .btn{width:100%}}
+    .waitlist-form{display:grid;gap:18px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.form-grid label{display:grid;gap:7px;color:var(--ink);font-size:13px;font-weight:650}.form-grid input,.form-grid select,.form-grid textarea{width:100%;min-width:0;border:1px solid #40536d;border-radius:10px;background:#0b1625;color:var(--ink);padding:12px;font:inherit;font-size:14px}.form-grid input:focus,.form-grid select:focus,.form-grid textarea:focus{outline:2px solid var(--cyan);outline-offset:2px}.form-grid .wide{grid-column:1/-1}.form-grid label span{font-weight:400;color:var(--muted);font-size:12px}.consent{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:12px;line-height:1.6}.consent input{margin-top:5px;accent-color:var(--cyan)}.waitlist-form .btn{justify-self:start;cursor:pointer}.waitlist-form .submit-note{font-size:12px;color:var(--muted);margin:0}@media(max-width:600px){.form-grid{grid-template-columns:1fr}.form-grid .wide{grid-column:auto}.waitlist-form .btn{width:100%}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
   </style>
 </head>
 <body>
@@ -60,9 +61,9 @@
     <div>
       <div class="eyebrow">Visão computacional · OCR · agente operacional</div>
       <h1>Do mundo físico aos dados que <span>movem sua operação.</span></h1>
-      <p class="lead">O 3L0 captura informações por câmera, códigos e documentos, usa OCR para extrair dados, organiza-os em uma estrutura consistente e prepara a correspondência com o sistema de destino. O agente coordena o fluxo e chama uma pessoa quando é preciso confirmar algo.</p>
-      <div class="actions"><a class="btn primary" href="#capacidades">Veja o que fazemos <span aria-hidden="true">↘</span></a><a class="btn secondary" href="#fluxo">Explore o fluxo</a></div>
-      <p class="note">Produto em desenvolvimento · Integrações e resultados operacionais precisam ser validados.</p>
+      <p class="lead">O 3L0 está sendo planejado para transformar informações de mercadorias e documentos em dados estruturados, relacionar evidências e apoiar a conferência operacional. Estamos mapeando os processos das primeiras equipes participantes antes de liberar o acesso ao ambiente experimental.</p>
+      <div class="actions"><a class="btn primary" href="#lista-espera">Entrar na lista de espera <span aria-hidden="true">↘</span></a><a class="btn secondary" href="#fluxo">Conheça a proposta</a></div>
+      <p class="note">Proposta de integração planejada · Acesso experimental sujeito a seleção e validação.</p>
     </div>
     <aside class="visual" aria-label="Demonstração interativa do fluxo de contexto em um smartphone">
       <div class="visual-head"><span>FLUXO DO AGENTE 3L0</span><span class="status">Demonstração conceitual</span></div>
@@ -88,8 +89,8 @@
     </aside>
   </div>
 
-  <section id="capacidades"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">Da captura à integração</div><h2>Não paramos em ler a imagem. Estruturamos a informação para ser usada.</h2><p>O 3L0 foi pensado para transformar sinais do mundo físico em dados organizados, verificáveis e adaptáveis ao sistema de destino — sem confundir uma extração automática com um dado confirmado.</p></div>
+  <section id="acesso"><div class="wrap"><div class="section-head"><div class="eyebrow">Acesso ao produto</div><h2>O acesso ao 3L0 Vision será liberado por autorização.</h2><p>Estamos preparando a autenticação e o vínculo ao workspace. Até a integração ser validada, não há login ou autorização de dispositivo habilitados por esta página. Se você deseja participar da fase inicial, manifeste interesse pela lista de espera abaixo.</p><a class="btn primary" href="#lista-espera">Solicitar acesso antecipado ↘</a></div></div></section>\n\n  <section id="capacidades"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Proposta de integração planejada</div><h2>Da mercadoria ao dado operacional, com contexto e conferência.</h2><p>A proposta do 3L0 é conectar captura, extração, estruturação e revisão em um fluxo rastreável. As etapas abaixo descrevem a integração planejada; não significam que todos os módulos e conectores estejam disponíveis hoje.</p></div>
     <div class="grid3">
       <article class="card"><div class="icon" aria-hidden="true">OCR</div><h3>Captura e extração</h3><p>Recebe imagens, códigos de barras e documentos. O OCR ajuda a extrair textos e campos relevantes, mantendo a relação com a fonte observada para revisão.</p></article>
       <article class="card"><div class="icon" aria-hidden="true">{ }</div><h3>Estruturação e mapeamento</h3><p>Organiza os dados em campos consistentes, normaliza valores, relaciona evidências e prepara uma saída compatível com o modelo exigido pelo destino — por exemplo, um ERP, CRM ou marketplace.</p></article>
@@ -99,7 +100,7 @@
   </div></section>
 
   <section id="proposta"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">Aplicação inicial em validação</div><h2>Quando as informações não batem, deixe a equipe focar na exceção.</h2><p>No recebimento, por exemplo, o 3L0 pode relacionar o que foi observado no produto com os dados extraídos do documento e os registros esperados. O objetivo é reduzir a redigitação e tornar as diferenças mais fáceis de revisar — sem prometer automação total.</p></div>
+    <div class="section-head"><div class="eyebrow">Caso de uso proposto</div><h2>Confira a mercadoria uma vez. Evite conferir tudo de novo.</h2><p>Na integração planejada para recebimento, o sistema relacionaria a mercadoria observada, os dados do documento e o cadastro esperado. A equipe poderia concentrar a atenção nas divergências, depois que esse fluxo for implementado e validado em operação.</p></div>
     <div class="grid3">
       <article class="card"><div class="icon" aria-hidden="true">↔</div><h3>Compare produto, nota e cadastro</h3><p>Reúna as informações que hoje podem estar espalhadas e veja o que corresponde entre a mercadoria recebida e o registro esperado.</p></article>
       <article class="card"><div class="icon" aria-hidden="true">◎</div><h3>Encontre diferenças mais cedo</h3><p>Descrições divergentes, informações ausentes e possíveis inconsistências ficam em destaque, em vez de se perderem no meio da conferência.</p></article>
@@ -113,7 +114,7 @@
   </div></div></section>
 
   <section id="fluxo"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">Como o fluxo funciona</div><h2>Da captura à informação pronta para o sistema.</h2><p>O exemplo percorre a extração por OCR, a estruturação dos campos, a resolução de correspondências, a revisão pelo operador e a preparação de uma saída mapeada para o destino.</p></div>
+    <div class="section-head"><div class="eyebrow">Fluxo de referência</div><h2>Do recebimento à conferência, em cinco passos.</h2><p>Este é o fluxo proposto para orientar o desenvolvimento e as entrevistas com equipes operacionais. A execução completa e suas integrações ainda precisam ser implementadas e testadas.</p></div>
     <div class="steps">
       <div class="phase"><h3>Capturar</h3><p>Receber imagem, código ou documento.</p></div>
       <div class="phase"><h3>Extrair com OCR</h3><p>Identificar texto e campos relevantes.</p></div>
@@ -124,20 +125,39 @@
   </div></section>
 
   <section id="escopo"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">Estado do produto</div><h2>Capacidade em desenvolvimento, integração por validar.</h2><p>A arquitetura prevê captura, OCR, normalização, resolução assistida, orquestração pelo agente e mapeamento para sistemas externos. O fluxo completo com documentos e integrações reais ainda precisa ser demonstrado e validado.</p></div>
+    <div class="section-head"><div class="eyebrow">Estado do produto</div><h2>Estamos definindo a integração com quem vive a operação.</h2><p>Antes de liberar o ambiente experimental, queremos entender os processos, os sistemas existentes e os pontos em que a conferência consome mais tempo. A lista de espera também será uma etapa de descoberta e priorização do piloto.</p></div>
     <div class="scope">
-      <article class="scope-card present"><h3>Capacidades previstas no fluxo</h3><ul><li>Captura por câmera, códigos de barras e leitura OCR.</li><li>Normalização e estruturação de observações com fonte e evidência.</li><li>Relacionamento de dados, correspondências, conflitos e incertezas.</li><li>Agente para coordenar tarefas, revisões e confirmações.</li><li>Preparação de saída estruturada para mapeamento por destino.</li></ul></article>
-      <article class="scope-card future"><h3>O que ainda precisa ser validado</h3><ul><li>Testes com mercadorias e documentos reais em ambiente de operação.</li><li>Conferência confiável em diferentes tipos de produto e embalagem.</li><li>Fluxo completo de revisão de divergências.</li><li>Integração com sistemas de estoque ou ERP.</li><li>Benefícios reais de tempo e redução de retrabalho.</li></ul></article>
+      <article class="scope-card present"><h3>Integração planejada</h3><ul><li>Captura por câmera, códigos de barras e leitura OCR.</li><li>Normalização e estruturação de observações com fonte e evidência.</li><li>Relacionamento de dados, correspondências, conflitos e incertezas.</li><li>Agente para coordenar tarefas, revisões e confirmações.</li><li>Preparação de saída estruturada para mapeamento por destino.</li></ul></article>
+      <article class="scope-card future"><h3>O que será validado com participantes</h3><ul><li>Testes com mercadorias e documentos reais em ambiente de operação.</li><li>Conferência confiável em diferentes tipos de produto e embalagem.</li><li>Fluxo completo de revisão de divergências.</li><li>Integração com sistemas de estoque ou ERP.</li><li>Benefícios reais de tempo e redução de retrabalho.</li></ul></article>
     </div>
     <p class="note">As capacidades acima estão em desenvolvimento ou validação. Ainda não há promessa de economia de tempo, precisão ou integração em produção.</p>
   </div></section>
 
-  <section class="closing"><div class="wrap"><div class="eyebrow">Para operações que dependem de dados confiáveis</div><h2>Do mundo físico a informações que seus sistemas conseguem usar.</h2><p>Estamos desenvolvendo o 3L0 para capturar, estruturar, relacionar e preparar dados para diferentes destinos operacionais. O próximo passo é validar o fluxo com documentos, produtos e sistemas reais.</p><a class="btn primary" href="#capacidades">Explore as capacidades</a></div></section>
+  <section id="lista-espera"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Acesso antecipado · Lista de espera</div><h2>Menos tempo procurando diferenças. Mais clareza para decidir.</h2><p>Antes de liberar o acesso ao ambiente experimental, estamos reunindo informações operacionais para entender o cenário de cada equipe e priorizar os primeiros pilotos. O formulário abaixo é a proposta de coleta; o envio será ativado após conectar um backend seguro e publicar o aviso de privacidade.</p></div>
+    <form class="card waitlist-form" id="waitlist-form">
+      <div class="form-grid">
+        <label>Nome profissional<input name="name" autocomplete="name" required maxlength="120" placeholder="Como podemos chamar você?"></label>
+        <label>E-mail de trabalho<input name="email" type="email" autocomplete="email" required maxlength="254" placeholder="voce@empresa.com"></label>
+        <label>Empresa ou operação<input name="organization" required maxlength="160" placeholder="Nome da empresa"></label>
+        <label>Seu papel na operação<select name="role" required><option value="">Selecione</option><option>Operação / recebimento</option><option>Estoque / logística</option><option>Gestão</option><option>Tecnologia / integração</option><option>Outro</option></select></label>
+        <label>Principal desafio operacional<select name="challenge" required><option value="">Selecione</option><option>Conferência de mercadorias</option><option>Digitação de dados de documentos</option><option>Divergências entre produto, nota e cadastro</option><option>Cadastro e atualização de produtos</option><option>Integração entre sistemas</option><option>Outro</option></select></label>
+        <label>Sistemas utilizados hoje<input name="systems" maxlength="240" placeholder="ERP, WMS, planilhas ou outros"></label>
+        <label class="wide">Como funciona hoje o processo? <span>(não inclua dados pessoais, documentos ou informações confidenciais)</span><textarea name="process" rows="4" maxlength="1200" placeholder="Descreva brevemente o fluxo e onde surgem os retrabalhos."></textarea></label>
+      </div>
+      <label class="consent"><input type="checkbox" name="consent" required><span>Autorizo o contato sobre a lista de espera e atividades de descoberta do 3L0. Entendo que esta inscrição não garante acesso ao piloto e que o envio será habilitado após a publicação do aviso de privacidade.</span></label>
+      <button class="btn primary" type="submit">Verificar formulário ↗</button>
+      <p class="note" id="waitlist-status" role="status" aria-live="polite">Prévia de interface: ainda não enviamos nem armazenamos inscrições.</p>
+      <p class="submit-note">Este formulário é uma demonstração de coleta. O envio real será ativado após configurar armazenamento seguro, aviso de privacidade e gestão de consentimento.</p>
+    </form>
+  </div></section>
 </main>
-<footer><div class="wrap foot"><span>© 2026 Symbeon Labs · 3L0 Vision</span><span>Visão de produto em desenvolvimento · Capacidades sujeitas a validação.</span></div></footer>
+<footer><div class="wrap foot"><span>© 2026 Symbeon Labs · 3L0 Vision</span><span>Proposta de integração planejada · Lista de espera em preparação.</span></div></footer>
 
 <script>
 (function(){
+  const waitlist = document.getElementById('waitlist-form');
+  if (waitlist) waitlist.addEventListener('submit', function(event){ event.preventDefault(); const status = document.getElementById('waitlist-status'); status.textContent = 'Campos validados no navegador. Nenhuma inscrição foi enviada ou armazenada; o backend seguro e o aviso de privacidade ainda precisam ser configurados.'; });
   const root = document.querySelector('.phone-demo');
   if (!root) return;
   const stages = [
