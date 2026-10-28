@@ -6,8 +6,9 @@
 
 ## Acesse
 
-- **Portal público:** https://3l0-portal.vercel.app/
+- **Portal na Vercel (publicação existente):** https://3l0-portal.vercel.app/
 - **3L0 Vision — ambiente experimental:** https://3l0-vision.vercel.app/
+- **Prévia GitHub Pages:** será considerada ativa somente depois de o workflow concluir e a URL ser confirmada nas configurações do repositório.
 
 O Vision é a aplicação central do produto. O Portal é a camada institucional e de orientação; não deve duplicar a lógica do Vision nem sugerir que um link para o aplicativo, por si só, garante acesso autorizado ou disponibilidade operacional.
 
@@ -70,9 +71,11 @@ Não há script `npm test`, `npm run build` ou pipeline de compilação document
 
 ## Publicação
 
-O endereço público conhecido é o [Portal na Vercel](https://3l0-portal.vercel.app/). A configuração efetiva do projeto e o resultado do deploy devem ser conferidos no provedor antes de anunciar uma publicação.
+O endereço publicado conhecido é o [Portal na Vercel](https://3l0-portal.vercel.app/). O repositório também contém um workflow do GitHub Actions para GitHub Pages, executado em pushes para `main` e manualmente. Isso não significa que o Pages já esteja habilitado: a origem **GitHub Actions** precisa estar configurada em **Settings → Pages**, e a primeira execução deve terminar com sucesso.
 
-Um commit na branch `main` não é, por si só, evidência de que o site publicado foi atualizado. Após o merge, confirme o estado do deploy e teste a URL publicada em desktop e celular.
+A página usa caminhos relativos para os recursos em `assets/`, permitindo servir o projeto sob o caminho `/3l0-portal/` do GitHub Pages sem quebrar logo e ícone. O ambiente GitHub Pages pode servir como prévia/publicação alternativa enquanto o limite da Vercel não permite atualizar o deploy. A Vercel permanece como destino a sincronizar depois.
+
+Um commit na branch `main` não é, por si só, evidência de que qualquer site publicado foi atualizado. Após o merge, confirme a execução do workflow, obtenha a URL fornecida pelo GitHub Pages e teste links, imagens e responsividade em desktop e celular. Não anuncie uma URL do Pages antes dessa confirmação.
 
 ## Princípios de publicação
 
