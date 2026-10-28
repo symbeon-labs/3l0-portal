@@ -6,15 +6,15 @@
   <meta name="theme-color" content="#080a0c">
   <link rel="icon" type="image/svg+xml" href="assets/3l0-vision-icon.svg">
   <link rel="preload" as="image" href="assets/3l0-vision-logo.svg">
-  <meta name="description" content="3L0 Vision — tornar o mundo físico computável, conectando observações, evidências digitais e sistemas operacionais. Ambiente experimental, com capacidades e integrações descritas conforme seu estado real.">
-  <title>3L0 Vision — Tornar o mundo físico computável</title>
+  <meta name="description" content="3L0 Vision: OCR e estruturação documental para transformar arquivos em dados organizados, destacar divergências e preparar informações para sistemas empresariais. Produto experimental.">
+  <title>3L0 Vision — Documentos em dados organizados</title>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap");
     :root{color-scheme:dark;--bg:#080a0c;--panel:#111519;--panel2:#171d22;--ink:#f4f7f8;--muted:#a0adb2;--line:#2b363b;--cyan:#78dce1;--blue:#9ab4ff;--green:#a9e6b5;--amber:#f2c879;--red:#ff777f;--signal:#a9e6b5;--focus-ring:0 0 0 3px rgb(120 220 225 / 24%);--max:1120px}
     *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#182126 0,transparent 42%),var(--bg);color:var(--ink);font:16px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
     a{color:inherit}a:focus-visible,summary:focus-visible{outline:3px solid var(--cyan);outline-offset:4px} .wrap{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
     header{position:sticky;top:0;z-index:10;background:#080a0ceF;border-bottom:1px solid #2b363bcc;backdrop-filter:blur(16px);padding-top:env(safe-area-inset-top)}
-    .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:inline-flex;align-items:center;text-decoration:none;flex:none}.brand-logo{display:block;width:170px;height:auto;max-height:none}.navlinks{display:flex;gap:24px;align-items:center}.navlinks a{font-size:13px;color:var(--muted);text-decoration:none}.navlinks a:hover{color:var(--ink)}.navlinks .nav-cta{border:1px solid #354247;padding:9px 13px;border-radius:10px;color:var(--ink)}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;flex:none}.brand-mark{display:block;width:30px;height:30px;object-fit:contain}.brand-wordmark{font-size:15px;font-weight:800;letter-spacing:.08em;color:var(--ink);white-space:nowrap}.brand-wordmark span{color:var(--cyan);font-size:11px;letter-spacing:.16em;margin-left:3px}.navlinks{display:flex;gap:24px;align-items:center}.navlinks a{font-size:13px;color:var(--muted);text-decoration:none}.navlinks a:hover{color:var(--ink)}.navlinks .nav-cta{border:1px solid #354247;padding:9px 13px;border-radius:10px;color:var(--ink)}
     .hero{padding:92px 0 76px;display:grid;grid-template-columns:1.12fr .88fr;gap:56px;align-items:center}.eyebrow{color:var(--cyan);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:750}.hero h1{font-size:clamp(40px,6vw,72px);line-height:1.04;letter-spacing:-.055em;margin:18px 0 22px;max-width:760px}.hero h1 span{color:var(--cyan)}.lead{font-size:clamp(17px,2vw,20px);line-height:1.65;color:#c7d0d3;max-width:650px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 17px;border-radius:11px;text-decoration:none;font-weight:700;font-size:14px;border:1px solid #354247}.btn.primary{background:var(--cyan);color:#080a0c;border-color:var(--cyan)}.btn.secondary{background:#111519;color:var(--ink)}.note{color:#a0adb2;font-size:12px;margin-top:16px}
     .phone-demo{display:flex;justify-content:center;position:relative;z-index:1;padding:2px 0 8px}
     .phone{width:min(100%,340px);border:7px solid #2b363b;border-radius:38px;background:#070e18;box-shadow:0 25px 70px #0007,inset 0 0 0 1px #58676d;overflow:hidden;position:relative}
@@ -46,24 +46,24 @@
     .scope{display:grid;grid-template-columns:1fr 1fr;gap:16px}.scope-card{border:1px solid var(--line);border-radius:17px;padding:23px;background:#111519}.scope-card h3{margin:0 0 15px;font-size:17px}.scope-card ul{margin:0;padding-left:19px;color:var(--muted);font-size:14px}.scope-card li+li{margin-top:9px}.scope-card.present{border-color:#315f54}.scope-card.present h3{color:var(--green)}.scope-card.future h3{color:#f2c879}
     .closing{padding:60px 0 86px;text-align:center}.closing h2{font-size:clamp(30px,5vw,48px);letter-spacing:-.04em;line-height:1.12;max-width:760px;margin:13px auto}.closing p{color:var(--muted);max-width:620px;margin:15px auto 24px}
     footer{border-top:1px solid var(--line);padding:25px 0 calc(25px + env(safe-area-inset-bottom));color:#8293a9;font-size:12px}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.foot a{color:#b8c7d9;text-decoration:none}
-    @media(max-width:800px){.wrap{width:min(100% - 32px,var(--max))}.nav{min-height:62px}.navlinks{gap:14px}.navlinks a{font-size:12px}.navlinks a:nth-child(2){display:none}.hero{grid-template-columns:1fr;gap:34px;padding:62px 0 54px}.visual{padding:18px}.grid3{grid-template-columns:1fr}.card{padding:20px}.principle{grid-template-columns:1fr}.quote-mark{display:none}.steps{grid-template-columns:1fr 1fr;row-gap:23px}.phase:last-child{grid-column:1/-1}.scope{grid-template-columns:1fr}section{padding:56px 0}.section-head{margin-bottom:25px}}
-    @media(max-width:420px){.wrap{width:calc(100% - 28px)}.navlinks a:first-child{display:none}.brand{font-size:13px}.hero h1{font-size:42px}.step{grid-template-columns:36px 1fr auto;padding:11px;gap:10px}.step-num{width:32px;height:32px}.step strong{font-size:13px}.step small{font-size:11px}.steps{grid-template-columns:1fr}.phase:last-child{grid-column:auto}.actions .btn{width:100%}}
+    @media(max-width:800px){.wrap{width:min(100% - 32px,var(--max))}.nav{min-height:58px}.brand-mark{width:26px;height:26px}.brand-wordmark{font-size:14px}.navlinks{gap:14px}.navlinks a{font-size:12px}.navlinks a:nth-child(2){display:none}.hero{grid-template-columns:1fr;gap:34px;padding:62px 0 54px}.visual{padding:18px}.grid3{grid-template-columns:1fr}.card{padding:20px}.principle{grid-template-columns:1fr}.quote-mark{display:none}.steps{grid-template-columns:1fr 1fr;row-gap:23px}.phase:last-child{grid-column:1/-1}.scope{grid-template-columns:1fr}section{padding:56px 0}.section-head{margin-bottom:25px}}
+    @media(max-width:420px){.wrap{width:calc(100% - 28px)}.navlinks a:first-child{display:none}.brand{font-size:13px}.brand-wordmark span{font-size:10px}.hero h1{font-size:42px}.step{grid-template-columns:36px 1fr auto;padding:11px;gap:10px}.step-num{width:32px;height:32px}.step strong{font-size:13px}.step small{font-size:11px}.steps{grid-template-columns:1fr}.phase:last-child{grid-column:auto}.actions .btn{width:100%}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
   </style>
 </head>
 <body>
 <header><div class="wrap nav">
-  <a class="brand" href="#inicio" aria-label="3L0 Vision, início"><img class="brand-logo" src="assets/3l0-vision-logo.svg" alt="3L0 Vision"></a>
+  <a class="brand" href="#inicio" aria-label="3L0 Vision, início"><img class="brand-mark" src="assets/3l0-vision-icon.svg" alt="" aria-hidden="true"><span class="brand-wordmark">3L0 <span>VISION</span></span></a>
   <nav class="navlinks" aria-label="Navegação principal"><a href="#capacidades">Capacidades</a><a href="#fluxo">Como funciona</a><a class="nav-cta" href="#escopo">Estado do produto ↘</a></nav>
 </div></header>
 <main id="inicio">
   <div class="wrap hero">
     <div>
-      <div class="eyebrow">3L0 VISION · CONECTANDO O MUNDO OPERACIONAL</div>
-      <h1>Tornar o mundo físico <span>computável.</span></h1>
-      <p class="lead">Conectamos observações do mundo físico a evidências digitais e sistemas operacionais. O 3L0 Vision está sendo desenvolvido para organizar as informações disponíveis, relacionar fontes, destacar divergências e tornar o próximo passo mais claro — com revisão humana quando a evidência for incompleta ou conflitante.</p>
+      <div class="eyebrow">OCR · ESTRUTURAÇÃO DOCUMENTAL · AGENTE 3L0</div>
+      <h1>Seus documentos, <span>prontos para virar dados.</span></h1>
+      <p class="lead">O 3L0 Vision está sendo desenvolvido para extrair informações de documentos, organizar os dados em campos úteis e destacar o que precisa de conferência — antes de preparar o resultado para outro sistema.</p>
       <div class="actions"><a class="btn primary" href="#capacidades">Veja o que fazemos <span aria-hidden="true">↘</span></a><a class="btn secondary" href="#fluxo">Explore o fluxo</a><a class="btn secondary" href="https://3l0-vision.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir Vision ↗</a></div>
-      <p class="note">Ambiente experimental · Redução de retrabalho e integrações ainda precisam ser validadas em operações reais.</p>
+      <p class="note">Produto experimental · OCR ponta a ponta, ganhos operacionais e integrações ainda precisam de validação.</p>
     </div>
     <aside class="visual" aria-label="Demonstração interativa do fluxo de contexto em um smartphone">
       <div class="visual-head"><span>OBSERVAR → RELACIONAR → RESOLVER → OPERAR</span><span class="status">Demonstração conceitual</span></div>
@@ -90,13 +90,13 @@
   </div>
 
   <section id="capacidades"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">Da captura à integração</div><h2>Não paramos em ler a imagem. Estruturamos a informação para ser usada.</h2><p>O 3L0 foi pensado para transformar sinais do mundo físico em dados organizados, verificáveis e adaptáveis ao sistema de destino — sem confundir uma extração automática com um dado confirmado.</p></div>
+    <div class="section-head"><div class="eyebrow">Da extração à próxima etapa</div><h2>Não basta ler o documento. É preciso organizar a informação.</h2><p>O objetivo é transformar PDFs, imagens e outros arquivos em campos estruturados, preservar a origem dos dados e sinalizar o que ainda precisa de revisão.</p></div>
     <div class="grid3">
-      <article class="card"><div class="icon" aria-hidden="true">OCR</div><h3>Captura e extração</h3><p>Recebe imagens, códigos de barras e documentos. O OCR ajuda a extrair textos e campos relevantes, mantendo a relação com a fonte observada para revisão.</p></article>
-      <article class="card"><div class="icon" aria-hidden="true">{ }</div><h3>Estruturação e mapeamento</h3><p>Organiza os dados em campos consistentes, normaliza valores, relaciona evidências e prepara uma saída compatível com o modelo exigido pelo destino — por exemplo, um ERP, CRM ou marketplace.</p></article>
-      <article class="card"><div class="icon" aria-hidden="true">↗</div><h3>Agente 3L0</h3><p>Coordena a tarefa: orienta a captura, acompanha o processamento, apresenta correspondências e conflitos, solicita confirmação quando necessário e conduz o resultado para a próxima etapa autorizada.</p></article>
+      <article class="card"><div class="icon" aria-hidden="true">OCR</div><h3>OCR e extração</h3><p>O fluxo previsto recebe documentos e imagens para extrair textos e campos relevantes. A extração precisa ser validada por formato e qualidade do arquivo.</p></article>
+      <article class="card"><div class="icon" aria-hidden="true">{ }</div><h3>Estruturação dos dados</h3><p>Organiza os campos, normaliza valores e preserva a relação com a fonte, para que a informação possa ser conferida e preparada para o uso seguinte.</p></article>
+      <article class="card"><div class="icon" aria-hidden="true">↗</div><h3>Agente 3L0</h3><p>É a camada de coordenação prevista para conduzir etapas, aplicar limites, apresentar divergências e encaminhar exceções para revisão humana. Sua integração operacional ainda precisa ser validada.</p></article>
     </div>
-    <div class="integration-strip"><strong>Preparado para conversar com seus sistemas</strong><span>ERPs · CRMs como Apollo · marketplaces · APIs próprias</span><p>Um adaptador traduz o modelo estruturado do 3L0 para os campos exigidos por cada destino. Uma integração efetiva depende de implementar e testar esse adaptador, configurar acesso e validar o contrato de dados; esses conectores não são apresentados como já ativos.</p></div>
+    <div class="integration-strip"><strong>Da informação organizada ao sistema de destino</strong><span>ERPs · CRMs · planilhas · APIs</span><p>O resultado poderá ser mapeado para os campos exigidos por cada destino. Isso depende de implementar e testar cada adaptador; nenhum conector externo é apresentado como ativo nesta versão.</p></div>
   </div></section>
 
   <section id="proposta"><div class="wrap">
@@ -114,7 +114,7 @@
   </div></div></section>
 
   <section id="fluxo"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">Como o fluxo funciona</div><h2>Da captura à informação organizada para revisão.</h2><p>A demonstração ilustra a captura, a organização dos campos, a comparação de informações e a revisão pelo operador. A conexão com sistemas de destino depende de integrações específicas, ainda sujeitas a validação.</p></div>
+    <div class="section-head"><div class="eyebrow">Como o fluxo funciona</div><h2>Da entrada do arquivo à saída revisável.</h2><p>Este é o fluxo de produto pretendido. As etapas de OCR real, revisão e integração precisam ser verificadas em execução antes de serem tratadas como disponíveis.</p></div>
     <div class="steps">
       <div class="phase"><h3>Capturar</h3><p>Receber imagem, código ou documento.</p></div>
       <div class="phase"><h3>Extrair com OCR</h3><p>Identificar texto e campos relevantes.</p></div>
@@ -125,35 +125,27 @@
   </div></section>
 
   <section id="escopo"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">Estado do produto</div><h2>Capacidade em desenvolvimento, integração por validar.</h2><p>A arquitetura prevê captura, OCR, normalização, resolução assistida, orquestração pelo agente e mapeamento para sistemas externos. O fluxo completo com documentos e integrações reais ainda precisa ser demonstrado e validado.</p></div>
+    <div class="section-head"><div class="eyebrow">Estado do produto</div><h2>Uma base experimental, com etapas ainda por validar.</h2><p>O repositório contém uma fundação de captura, contratos de observação, resolução determinística e APIs. Isso não comprova que o OCR documental, o fluxo completo ou as integrações estejam prontos para uso operacional.</p></div>
     <div class="scope">
-      <article class="scope-card present"><h3>Capacidades previstas no fluxo</h3><ul><li>Captura por câmera, códigos de barras e leitura OCR.</li><li>Normalização e estruturação de observações com fonte e evidência.</li><li>Relacionamento de dados, correspondências, conflitos e incertezas.</li><li>Agente para coordenar tarefas, revisões e confirmações.</li><li>Preparação de saída estruturada para mapeamento por destino.</li></ul></article>
-      <article class="scope-card future"><h3>O que ainda precisa ser validado</h3><ul><li>Testes com mercadorias e documentos reais em ambiente de operação.</li><li>Conferência confiável em diferentes tipos de produto e embalagem.</li><li>Fluxo completo de revisão de divergências.</li><li>Integração com sistemas de estoque ou ERP.</li><li>Benefícios reais de tempo e redução de retrabalho.</li></ul></article>
-    </div>
-    <p class="note">As capacidades acima estão em desenvolvimento ou validação. Ainda não há promessa de economia de tempo, precisão ou integração em produção.</p>
-  </div></section>
-
-  <section id="estado-atual"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">Estado atual do produto · 27/10/2026</div><h2>O que está disponível e o que ainda precisa ser validado.</h2><p>O 3L0 Vision já possui autenticação Supabase e seleção de workspaces no aplicativo. A API de resolução está sendo alinhada à implantação serverless e à autorização por workspace; a integração ainda exige validação no ambiente publicado.</p></div>
-    <div class="scope">
-      <article class="scope-card present"><h3>Base disponível</h3><ul>
-        <li>Aplicativo Vision separado do portal público.</li>
-        <li>Autenticação Supabase e consulta de workspaces autorizados.</li>
-        <li>Fluxo de identificação experimental e catálogo sintético local.</li>
-        <li>Contrato de API v1 em preparação, com verificação de usuário e associação ativa ao workspace.</li>
+      <article class="scope-card present"><h3>Base técnica no repositório</h3><ul>
+        <li>Estrutura de aplicação e fluxo experimental de identificação.</li>
+        <li>Contratos para observações, normalização e resolução determinística local.</li>
+        <li>Implementação de captura no navegador e leitura de códigos condicionada ao suporte do dispositivo.</li>
+        <li>Trabalho em curso sobre API versionada, autorização por workspace e experiência de revisão.</li>
       </ul></article>
-      <article class="scope-card future"><h3>Não apresentar como pronto</h3><ul>
-        <li>Resolução persistente ou histórico compartilhado entre dispositivos.</li>
-        <li>OCR fiscal completo, validação de autenticidade de XML ou identidade física garantida.</li>
-        <li>Integração ativa com ERP/WMS, OCR remoto ou ORC externo.</li>
-        <li>Validação operacional em campo, métricas comprovadas ou disponibilidade de produção garantida.</li>
+      <article class="scope-card future"><h3>Antes de uso empresarial</h3><ul>
+        <li>Validar OCR real em PDFs e imagens representativas, campo a campo.</li>
+        <li>Testar o fluxo completo: arquivo → extração → resolução → saída persistida.</li>
+        <li>Confirmar autenticação, autorização e isolamento de dados no ambiente publicado.</li>
+        <li>Implementar e testar cada integração com ERP, CRM ou API de destino.</li>
+        <li>Medir precisão, tempo, correções humanas e custo por documento.</li>
       </ul></article>
     </div>
-    <p class="note">O endpoint de resolução continua experimental. Antes de uso operacional, são necessários testes de autorização com Supabase configurado, validação do deploy e controles adicionais contra abuso. A interface não deve ser interpretada como prova de persistência ou de integração em produção.</p>
+    <p class="note">A demonstração desta página é conceitual. Testes sintéticos e build bem-sucedido não equivalem à validação com documentos reais, nem comprovam redução de retrabalho ou prontidão para produção.</p>
     <div class="actions"><a class="btn primary" href="https://3l0-vision.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir ambiente experimental ↗</a><a class="btn secondary" href="https://github.com/symbeon-labs/3l0-vision" target="_blank" rel="noopener noreferrer">Consultar repositório</a></div>
   </div></section>
 
-  <section class="closing"><div class="wrap"><div class="eyebrow">Para operações que dependem de dados confiáveis</div><h2>Do mundo físico a informações que seus sistemas conseguem usar.</h2><p>Estamos desenvolvendo o 3L0 para capturar, estruturar, relacionar e preparar dados para diferentes destinos operacionais. O próximo passo é validar o fluxo com documentos, produtos e sistemas reais.</p><a class="btn primary" href="#capacidades">Explore as capacidades</a></div></section>
+  <section class="closing"><div class="wrap"><div class="eyebrow">3L0 VISION · TORNAR O MUNDO FÍSICO COMPUTÁVEL</div><h2>Menos transcrição. Mais informação pronta para conferir e usar.</h2><p>Estamos validando a melhor forma de transformar documentos empresariais em dados organizados, com limites claros e revisão humana quando necessário.</p><a class="btn primary" href="https://3l0-vision.vercel.app/" target="_blank" rel="noopener noreferrer">Conheça o ambiente experimental ↗</a></div></section>
 </main>
 <footer><div class="wrap foot"><span>© 2026 Symbeon Labs · 3L0 Vision</span><span>Visão de produto em desenvolvimento · Capacidades sujeitas a validação.</span></div></footer>
 
