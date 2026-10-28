@@ -92,7 +92,7 @@
     <div class="grid3">
       <article class="card"><div class="icon" aria-hidden="true">OCR</div><h3>Captura e extração</h3><p>O fluxo previsto recebe imagens, códigos e arquivos para identificar informações relevantes. A extração precisa ser validada conforme a fonte e a qualidade do material.</p></article>
       <article class="card"><div class="icon" aria-hidden="true">{ }</div><h3>Contexto e estruturação</h3><p>Organiza os dados, relaciona informações e preserva a ligação com suas fontes, para que correspondências e divergências possam ser conferidas.</p></article>
-      <article class="card"><div class="icon" aria-hidden="true">↗</div><h3>Agente 3L0</h3><p>É a camada de coordenação prevista para conduzir etapas, aplicar limites, apresentar divergências e encaminhar exceções para revisão humana. Sua integração operacional ainda precisa ser validada.</p></article>
+      <article class="card agent-card"><div class="icon" aria-hidden="true">↗</div><h3>Agente 3L0 · Orquestração</h3><p>A camada de coordenação que conecta as etapas do fluxo: acompanha evidências, aplica regras e limites, identifica quando faltam informações e encaminha conflitos para revisão humana. O objetivo não é apenas gerar respostas, mas orientar o próximo passo com rastreabilidade. A integração operacional ainda está em validação.</p></article>
     </div>
     <div class="integration-strip"><strong>Da informação organizada ao sistema de destino</strong><span>ERPs · CRMs · planilhas · APIs</span><p>O resultado poderá ser mapeado para os campos exigidos por cada destino. Isso depende de implementar e testar cada adaptador; nenhum conector externo é apresentado como ativo nesta versão.</p></div>
   </div></section>
@@ -112,12 +112,12 @@
   </div></div></section>
 
   <section id="fluxo"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">Como o fluxo funciona</div><h2>Da captura à informação pronta para uso.</h2><p>Este é o fluxo de produto pretendido. As etapas de extração, revisão e integração precisam ser verificadas em execução antes de serem tratadas como disponíveis.</p></div>
+    <div class="section-head"><div class="eyebrow">Como o fluxo funciona</div><h2>O agente conecta as etapas — com evidências e limites.</h2><p>O fluxo pretendido vai da observação à preparação dos dados para uso. O Agente 3L0 ocupa a camada de coordenação: acompanha o que foi extraído, direciona verificações, sinaliza incertezas e prepara o próximo passo sem substituir a validação humana. A execução integral ainda precisa ser comprovada.</p></div>
     <div class="steps">
       <div class="phase"><h3>Capturar</h3><p>Receber sinais, imagens, códigos ou arquivos.</p></div>
       <div class="phase"><h3>Extrair</h3><p>Identificar textos, códigos e campos relevantes.</p></div>
       <div class="phase"><h3>Estruturar</h3><p>Normalizar e relacionar dados e evidências.</p></div>
-      <div class="phase"><h3>Orquestrar com o agente</h3><p>Revisar conflitos e pedir confirmação quando necessário.</p></div>
+      <div class="phase agent-phase"><h3>Coordenar com o Agente 3L0</h3><p>Aplicar limites, direcionar verificações e encaminhar incertezas para revisão.</p></div>
       <div class="phase"><h3>Mapear para o destino</h3><p>Preparar a saída para ERP, CRM ou API.</p></div>
     </div>
   </div></section>
@@ -140,10 +140,10 @@
       </ul></article>
     </div>
     <p class="note">A demonstração desta página é conceitual. Testes sintéticos e build bem-sucedido não equivalem à validação com documentos reais, nem comprovam redução de retrabalho ou prontidão para produção.</p>
-    <div class="actions"><a class="btn primary" href="https://3l0-vision.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir ambiente experimental ↗</a><a class="btn secondary" href="https://github.com/symbeon-labs/3l0-vision" target="_blank" rel="noopener noreferrer">Consultar repositório</a></div>
+    <div class="actions"><a class="btn primary" href="https://3l0-vision.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir ambiente experimental ↗</a></div>
   </div></section>
 
-  <section class="closing"><div class="wrap"><div class="eyebrow">3L0 VISION · TORNAR O MUNDO FÍSICO COMPUTÁVEL</div><h2>Conecte o que acontece no mundo real aos sistemas que movem seu negócio.</h2><p>Estamos validando como transformar informações observadas em dados organizados e úteis, com limites claros e revisão humana quando necessário.</p><a class="btn primary" href="https://3l0-vision.vercel.app/" target="_blank" rel="noopener noreferrer">Conheça o ambiente experimental ↗</a></div></section>
+  <section class="closing"><div class="wrap"><div class="eyebrow">3L0 VISION · TORNAR O MUNDO FÍSICO COMPUTÁVEL</div><h2>Conecte o que acontece no mundo real aos sistemas que movem seu negócio.</h2><p>O 3L0 Vision organiza informações do mundo físico; o Agente 3L0 foi concebido para coordenar sua verificação e preparar ações rastreáveis, mantendo pessoas no controle diante de incertezas. A capacidade operacional segue em validação.</p><a class="btn primary" href="https://3l0-vision.vercel.app/" target="_blank" rel="noopener noreferrer">Conheça o ambiente experimental ↗</a></div></section>
 </main>
 <footer><div class="wrap foot"><span>© 2026 Symbeon Labs · 3L0 Vision</span><span>Visão de produto em desenvolvimento · Capacidades sujeitas a validação.</span></div></footer>
 
