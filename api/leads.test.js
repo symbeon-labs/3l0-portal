@@ -2,6 +2,14 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const handler = require('./leads');
 
+test.beforeEach(() => {
+  process.env.LEADS_PRIVACY_APPROVED = 'true';
+  process.env.LEADS_CONTROLLER_NAME = 'Controlador de teste';
+  process.env.LEADS_PRIVACY_EMAIL = 'privacidade@example.com';
+  process.env.LEADS_PRIVACY_URL = 'https://example.com/privacidade';
+  process.env.LEADS_RETENTION_DAYS = '90';
+});
+
 function response() {
   return {
     statusCode: 200,
@@ -75,4 +83,13 @@ test('forwards a valid lead and computes priority on the server', async (t) => {
   assert.equal(sent.qualification.use_case, 'receiving');
   assert.equal(sent.sales_profile.priority, 'P1 — contato prioritário');
   assert.equal(sent.sales_profile.score, 8);
+});
+
+test('fails closed when privacy approval or required privacy details are missing', async () => {
+  delete process.env.LEADS_PRIVACY_APPROVED;
+  process.env.LEADS_WEBHOOK_URL = 'https://hooks.example.com/leads';
+  const res = response();
+  await handler(request(validLead()), res);
+  assert.equal(res.statusCode, 503);
+  assert.notEqual(res.payload.ok, true);
 });
