@@ -73,7 +73,7 @@
     .scope{display:grid;grid-template-columns:1fr 1fr;gap:16px}.scope-card{border:1px solid var(--line);border-radius:17px;padding:23px;background:#111519}.scope-card h3{margin:0 0 15px;font-size:17px}.scope-card ul{margin:0;padding-left:19px;color:var(--muted);font-size:14px}.scope-card li+li{margin-top:9px}.scope-card.present{border-color:#315f54}.scope-card.present h3{color:var(--green)}.scope-card.future h3{color:#f2c879}
     .closing{padding:60px 0 86px;text-align:center}.closing h2{font-size:clamp(30px,5vw,48px);letter-spacing:-.04em;line-height:1.12;max-width:760px;margin:13px auto}.closing p{color:var(--muted);max-width:620px;margin:15px auto 24px}
     footer{border-top:1px solid var(--line);padding:25px 0 calc(25px + env(safe-area-inset-bottom));color:#8293a9;font-size:12px}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.foot a{color:#b8c7d9;text-decoration:none}
-    @media(max-width:800px){.wrap{width:min(100% - 32px,var(--max))}.nav{min-height:58px}.brand-mark{width:26px;height:26px}.brand-wordmark{font-size:14px}.navlinks{gap:14px}.navlinks a{font-size:12px}.navlinks a:nth-child(2){display:inline}.hero{grid-template-columns:1fr;gap:34px;padding:62px 0 54px}.visual{padding:18px}.grid3{grid-template-columns:1fr}.card{padding:20px}.principle{grid-template-columns:1fr}.quote-mark{display:none}.steps{grid-template-columns:1fr 1fr;row-gap:23px}.phase:last-child{grid-column:1/-1}.scope{grid-template-columns:1fr}section{padding:56px 0}.section-head{margin-bottom:25px}}
+    @media(max-width:800px){.wrap{width:min(100% - 32px,var(--max))}.nav{min-height:58px;flex-wrap:wrap;padding:10px 0}.brand-mark{width:26px;height:26px}.brand-wordmark{font-size:14px}.navlinks{gap:10px;flex-wrap:wrap;justify-content:flex-end;max-width:100%}.navlinks a{font-size:12px}.navlinks a:nth-child(2){display:inline}.hero{grid-template-columns:1fr;gap:34px;padding:62px 0 54px}.visual{padding:18px}.grid3{grid-template-columns:1fr}.card{padding:20px}.principle{grid-template-columns:1fr}.quote-mark{display:none}.steps{grid-template-columns:1fr 1fr;row-gap:23px}.phase:last-child{grid-column:1/-1}.scope{grid-template-columns:1fr}section{padding:56px 0}.section-head{margin-bottom:25px}} @media(max-width:480px){.navlinks{width:100%;justify-content:flex-start}.navlinks a{font-size:11px}}
     @media(max-width:420px){.wrap{width:calc(100% - 28px)}.navlinks a:first-child{display:inline}.brand{font-size:13px}.brand-wordmark span{font-size:10px}.hero h1{font-size:42px}.step{grid-template-columns:36px 1fr auto;padding:11px;gap:10px}.step-num{width:32px;height:32px}.step strong{font-size:13px}.step small{font-size:11px}.steps{grid-template-columns:1fr}.phase:last-child{grid-column:auto}.actions .btn{width:100%}.context-demo{padding:16px}.observed-object{height:180px}.evidence-row{grid-template-columns:27px minmax(0,1fr)}.evidence-state{grid-column:2;text-align:left;margin-top:-6px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
   </style>
@@ -81,16 +81,16 @@
 <body>
 <header><div class="wrap nav">
   <a class="brand" href="#inicio" aria-label="3L0 Vision, início"><img class="brand-mark" src="assets/3l0-vision-icon.svg" alt="" aria-hidden="true"><span class="brand-wordmark">3L0 <span>VISION</span></span></a>
-  <nav class="navlinks" aria-label="Navegação principal"><a href="#capacidades">Capacidades</a><a href="#fluxo">Como funciona</a><a class="nav-cta" href="#escopo">Estado do produto ↘</a></nav>
+  <nav class="navlinks" aria-label="Navegação principal"><a href="#capacidades">Capacidades</a><a href="#fluxo">Como funciona</a><a href="institucional.html">Ecossistema</a><a class="nav-cta" href="#escopo">Estado do produto ↘</a></nav>
 </div></header>
 <main id="inicio">
   <div class="wrap hero">
     <div>
       <div class="eyebrow">CAPTURA · CONTEXTO · DADOS · AÇÃO</div>
-      <h1>Transforme sinais do mundo real em <span>informação útil.</span></h1>
-      <p class="lead">O 3L0 Vision está sendo desenvolvido para capturar e interpretar informações do mundo físico — como textos, códigos, imagens e registros —, relacioná-las a outras fontes e destacar o que precisa de conferência. Assim, dados dispersos podem ganhar contexto e apoiar decisões e processos em diferentes setores.</p>
+      <h1>Transforme sinais do mundo real em <span>informação confiável para operar.</span></h1>
+      <p class="lead">O 3L0 Vision está sendo desenvolvido para capturar e interpretar informações de imagens, códigos, documentos e registros. Ao relacionar esses dados a outras fontes, busca identificar correspondências, destacar divergências e mostrar o que ainda precisa de validação. A proposta é transformar informações dispersas em contexto estruturado, apoiando conferências e decisões em processos operacionais.</p>
       <div class="actions"><a class="btn primary" href="#contato">Fale sobre sua operação <span aria-hidden="true">↘</span></a><a class="btn secondary" href="#fluxo">Veja como funciona</a><a class="btn secondary" href="https://3l0-vision.vercel.app/" target="_blank" rel="noopener noreferrer">Explorar Vision ↗</a></div>
-      <p class="note">Produto experimental · OCR ponta a ponta, ganhos operacionais e integrações ainda precisam de validação.</p>
+      <p class="note">Produto experimental. A leitura documental completa, a integração entre fontes e os resultados operacionais ainda precisam ser validados.</p>
     </div>
     <aside class="context-demo" aria-label="Demonstração conceitual: do sinal observado à informação contextualizada">
       <div class="context-demo-head"><span class="mono">FLUXO DE CONTEXTO / 001</span><span class="status">Conceito</span></div>
