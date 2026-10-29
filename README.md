@@ -6,7 +6,7 @@ Superfície institucional pública do ecossistema 3L0 / Symbeon Labs.
 
 - `index.html` — página institucional do 3L0 Vision com jornada adaptativa de qualificação comercial.
 - `api/leads.js` — endpoint serverless que valida e encaminha leads para um webhook privado.
-- `ROADMAP.md` — plano de execução do produto, proteção de acesso, validação técnica e piloto comercial.
+- `ROADMAP.md` — plano de execução do produto, proteção de acesso, validação técnica e piloto comercial.\n- `pesquisa.html` — página pública de pesquisa, fontes externas, hipótese ORC e estado da validação experimental.
 - A página descreve a proposta e o fluxo de referência sem apresentar hipóteses como capacidades validadas.
 
 ## Princípios de publicação
