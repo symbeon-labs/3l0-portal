@@ -50,7 +50,21 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ error: 'As respostas de qualificação são inválidas. Recarregue a página e tente novamente.' });
   }
 
-  const profile = body.profile && typeof body.profile === 'object' ? body.profile : {};
+  // Calculate priority on the server from validated answers; never trust the browser's score.
+  let score = 0;
+  if (body.timeline === 'now') score += 3; else if (body.timeline === 'quarter') score += 2;
+  if (body.role === 'decision_maker') score += 2; else if (body.role === 'technical' || body.role === 'operations') score += 1;
+  if (body.volume === 'daily_high' || body.volume === 'daily') score += 2; else if (body.volume === 'weekly') score += 1;
+  if (body.workflow === 'manual' || body.workflow === 'mixed') score += 1;
+  const priority = score >= 6 ? 'P1 — contato prioritário' : score >= 3 ? 'P2 — qualificação comercial' : 'P3 — nutrição e descoberta';
+  const approaches = {
+    now: 'Entender urgência, impacto e possibilidade de caso-piloto.',
+    quarter: 'Validar requisitos, envolvidos na decisão e critérios de sucesso.',
+    exploring: 'Compartilhar contexto e explorar aderência antes de propor piloto.',
+    research: 'Compartilhar contexto e explorar aderência antes de propor piloto.'
+  };
+  const sectorLabels = {industry:'Indústria e manufatura',retail:'Varejo e distribuição',logistics:'Logística e cadeia de suprimentos',services:'Serviços profissionais',health:'Saúde e laboratórios',agribusiness:'Agro e produção rural',other:'Outro setor'};
+  const roleLabels = {decision_maker:'Decisor/aprovador',technical:'Tecnologia, dados ou inovação',operations:'Operação ou processo',influencer:'Pesquisa e recomendação',consultant:'Consultor ou parceiro',other:'Outro papel'};
   const lead = {
     event: '3l0.portal.lead.created',
     source: '3l0-portal',
@@ -72,15 +86,15 @@ module.exports = async function handler(req, res) {
       challenge: clean(body.challenge, 1200) || null
     },
     sales_profile: {
-      score: Number.isFinite(profile.qualification_score) ? Math.max(0, Math.min(8, profile.qualification_score)) : null,
-      priority: clean(profile.priority, 80) || 'Pendente de qualificação',
-      suggested_approach: clean(profile.approach, 300) || null,
-      sector_label: clean(profile.sector_label, 100),
-      role_label: clean(profile.role_label, 100),
-      use_case_label: clean(profile.use_case_label, 120),
-      workflow_label: clean(profile.workflow_label, 100),
-      volume_label: clean(profile.volume_label, 100),
-      timeline_label: clean(profile.timeline_label, 100)
+      score,
+      priority,
+      suggested_approach: approaches[body.timeline],
+      sector_label: sectorLabels[body.sector],
+      role_label: roleLabels[body.role],
+      use_case_label: clean(body.useCase, 120),
+      current_workflow: body.workflow,
+      frequency: body.volume,
+      timeline: body.timeline
     },
     metadata: {
       page: clean(body.page, 200),
