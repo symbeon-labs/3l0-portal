@@ -44,13 +44,21 @@ Não liberar acesso operacional externo até que:
 
 **Objetivo:** provar um fluxo útil de ponta a ponta em um caso de uso prioritário.
 
-- [ ] Selecionar um caso de uso com problema, usuário e resultado esperados definidos.
-- [ ] Executar o fluxo com dados sintéticos antes de usar dados operacionais.
-- [ ] Registrar entradas, saídas, erros, exceções e intervenção humana.
-- [ ] Definir critérios de sucesso antes do teste e preservar evidências reproduzíveis.
-- [ ] Distinguir claramente funcionalidades implementadas, experimentos e hipóteses.
+**Caso candidato inicial:** conferência de recebimento, porque permite comparar fontes, aplicar regras explícitas e medir divergências. A seleção ainda deve ser confirmada contra o estado real do sistema e a disponibilidade de um usuário/processo representativo.
 
-**Critério de saída:** demonstração reproduzível, limites documentados e resultados comparados com critérios predefinidos.
+- [ ] Inspecionar o estado real do fluxo no Vision: captura, extração, estruturação, comparação, estado de saída e registro de evidências.
+- [ ] Mapear cada etapa como proposta, implementada, testada ou validada em ambiente real.
+- [ ] Construir benchmark sintético inicial de 40 casos: consistentes, divergentes, degradados e incompletos/conflitantes.
+- [ ] Criar e congelar os rótulos de referência antes de executar o candidato.
+- [ ] Comparar extração simples, regras determinísticas e fluxo 3L0 quando os baselines estiverem realmente disponíveis.
+- [ ] Medir exatidão por campo, precisão/recall de divergências, falsas liberações, abstenção, revisão humana, latência e rastreabilidade.
+- [ ] Registrar commit, configuração, hash da entrada, saídas, erros e intervenções para cada execução.
+- [ ] Definir os limiares de sucesso antes do teste confirmatório; não ajustar critérios retroativamente para favorecer o resultado.
+- [ ] Publicar resultados e limitações sem confundir evidência externa, dados sintéticos e validação real.
+
+**Protocolo e fontes:** [ORC — evidências externas e plano de validação](./docs/research/ORC-evidence-and-validation-plan.md).
+
+**Critério de saída:** demonstração reproduzível, limites documentados e resultados comparados com critérios predefinidos. A criação do protocolo não equivale à execução do benchmark.
 
 ## Etapa 3 — Construir credibilidade técnica
 
