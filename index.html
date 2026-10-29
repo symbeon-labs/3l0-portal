@@ -75,7 +75,7 @@
     section{padding:76px 0;border-top:1px solid #2b363b88}.section-head{max-width:720px;margin-bottom:34px}.section-head h2{font-size:clamp(28px,4vw,43px);letter-spacing:-.04em;line-height:1.13;margin:12px 0}.section-head p{color:var(--muted);font-size:17px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.integration-strip{margin-top:18px;padding:22px 24px;border:1px solid #2b4146;border-radius:16px;background:linear-gradient(110deg,#122b3a,#111519)}.integration-strip strong{display:block;font-size:16px}.integration-strip span{display:block;color:var(--cyan);font-size:14px;margin-top:8px}.integration-strip p{color:var(--muted);font-size:12px;line-height:1.6;margin:12px 0 0}.card{padding:23px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(145deg,#121e30,#0e1828)}.card .icon{width:38px;height:38px;border:1px solid #3b6170;background:#15313d;border-radius:11px;display:grid;place-items:center;color:var(--cyan);font-weight:800}.card .example-icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.card h3{font-size:18px;margin:17px 0 8px}.card p{font-size:14px;color:var(--muted);margin:0}
     .principle{padding:clamp(25px,5vw,50px);border:1px solid #2b4146;border-radius:22px;background:linear-gradient(120deg,#122b3a,#111519 65%);display:grid;grid-template-columns:1fr .6fr;gap:32px;align-items:center}.principle h2{font-size:clamp(27px,4vw,43px);letter-spacing:-.04em;line-height:1.13;margin:12px 0}.principle p{color:var(--muted);margin-bottom:0}.quote-mark{font-size:clamp(72px,11vw,120px);font-weight:850;line-height:1;color:#78dce133;text-align:center;letter-spacing:-.1em}
     .steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;counter-reset:phase}.phase{border-top:2px solid #52778b;padding:15px 12px 0;counter-increment:phase;min-width:0}.phase:before{content:"0" counter(phase);font:500 11px "JetBrains Mono",monospace;color:var(--cyan);letter-spacing:.12em;display:block}.phase-icon{display:block;width:25px;height:25px;margin:13px 0 10px;color:var(--cyan)}.phase-icon svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.phase h3{font-size:15px;margin:0 0 7px}.phase p{font-size:12px;color:var(--muted);margin:0}
-    .scope{display:grid;grid-template-columns:1fr 1fr;gap:16px}.scope-card{border:1px solid var(--line);border-radius:17px;padding:23px;background:#111519}.scope-card h3{margin:0 0 15px;font-size:17px}.scope-card ul{margin:0;padding-left:19px;color:var(--muted);font-size:14px}.scope-card li+li{margin-top:9px}.scope-card.present{border-color:#315f54}.scope-card.present h3{color:var(--green)}.scope-card.future h3{color:#f2c879}
+    .scope{display:grid;grid-template-columns:1fr 1fr;gap:24px}.scope-card{border:0;border-top:1px solid var(--line);border-radius:0;padding:18px 0 0;background:transparent}.scope-card h3{margin:0 0 14px;font-size:16px;font-weight:650;color:var(--ink)}.scope-card ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}.scope-card li+li{margin-top:7px}.scope-card.present,.scope-card.future{border-color:#354247}.scope-card.present h3,.scope-card.future h3{color:var(--ink)}.scope .scope-card li::marker{color:var(--cyan)}
     .closing{padding:60px 0 86px;text-align:center}.closing h2{font-size:clamp(30px,5vw,48px);letter-spacing:-.04em;line-height:1.12;max-width:760px;margin:13px auto}.closing p{color:var(--muted);max-width:620px;margin:15px auto 24px}
     footer{border-top:1px solid var(--line);padding:25px 0 calc(25px + env(safe-area-inset-bottom));color:#8293a9;font-size:12px}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.foot a{color:#b8c7d9;text-decoration:none}
     @media(max-width:800px){.wrap{width:min(100% - 32px,var(--max))}.nav{min-height:58px;flex-wrap:wrap;padding:10px 0}.brand-mark{width:26px;height:26px}.brand-wordmark{font-size:14px}.navlinks{gap:10px;flex-wrap:wrap;justify-content:flex-end;max-width:100%}.navlinks a{font-size:12px}.navlinks a:nth-child(2){display:inline}.hero{grid-template-columns:1fr;gap:34px;padding:62px 0 54px}.visual{padding:18px}.grid3{grid-template-columns:1fr}.card{padding:20px}.principle{grid-template-columns:1fr}.quote-mark{display:none}.steps{grid-template-columns:1fr 1fr;row-gap:23px}.phase:last-child{grid-column:1/-1}.scope{grid-template-columns:1fr}section{padding:56px 0}.section-head{margin-bottom:25px}} @media(max-width:480px){.navlinks{width:100%;justify-content:flex-start}.navlinks a{font-size:11px}}
@@ -157,24 +157,23 @@
   </div></section>
 
   <section id="escopo"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">Estado do produto</div><h2>Base técnica em evolução. Validação de campo como próximo marco.</h2><p>O repositório reúne componentes de captura, contratos de observação, resolução determinística local e APIs. O próximo marco é avaliar o sistema com documentos e fluxos representativos, medindo qualidade da extração, tempo de processamento, necessidade de correção humana e compatibilidade com os destinos previstos. Esses resultados devem preceder qualquer afirmação de prontidão operacional.</p></div>
+    <div class="section-head"><div class="eyebrow">Estado atual</div><h2>O que existe. O que falta validar.</h2><p>Já há componentes de captura, estruturação e resolução local no repositório. O próximo passo é testar o fluxo completo com documentos e operações representativas.</p></div>
     <div class="scope">
-      <article class="scope-card present"><h3>Base técnica no repositório</h3><ul>
-        <li>Estrutura de aplicação e fluxo experimental de identificação.</li>
-        <li>Contratos para observações, normalização e resolução determinística local.</li>
-        <li>Implementação de captura no navegador e leitura de códigos condicionada ao suporte do dispositivo.</li>
-        <li>Trabalho em curso sobre API versionada, autorização por workspace e experiência de revisão.</li>
+      <article class="scope-card present"><h3>No repositório</h3><ul>
+        <li>Fluxo experimental de identificação.</li>
+        <li>Contratos de observação, normalização e resolução local.</li>
+        <li>Captura no navegador e leitura de códigos conforme o dispositivo.</li>
+        <li>API, permissões por workspace e revisão em desenvolvimento.</li>
       </ul></article>
-      <article class="scope-card future"><h3>Antes de uso empresarial</h3><ul>
-        <li>Validar OCR real em PDFs e imagens representativas, campo a campo.</li>
-        <li>Testar o fluxo completo: arquivo → extração → resolução → saída persistida.</li>
-        <li>Confirmar autenticação, autorização e isolamento de dados no ambiente publicado.</li>
-        <li>Implementar e testar cada integração com ERP, CRM ou API de destino.</li>
-        <li>Medir precisão, tempo, correções humanas e custo por documento.</li>
+      <article class="scope-card future"><h3>Próximas validações</h3><ul>
+        <li>Qualidade da leitura em PDFs e imagens reais.</li>
+        <li>Fluxo completo, da entrada à persistência do resultado.</li>
+        <li>Autenticação e isolamento de dados no ambiente publicado.</li>
+        <li>Integrações e métricas de precisão, tempo e custo.</li>
       </ul></article>
     </div>
-    <p class="note">Esta página apresenta um fluxo conceitual. Testes sintéticos e builds bem-sucedidos não substituem a validação com documentos e operações representativas, nem comprovam redução de retrabalho ou prontidão para produção.</p>
-    <div class="actions"><a class="btn secondary" href="#contato">Avaliar um caso de uso ↗</a></div>
+    <p class="note">O produto ainda não foi validado para uso empresarial em operações reais.</p>
+    <div class="actions"><a class="btn secondary" href="#contato">Discutir um caso de uso ↗</a></div>
   </div></section>
 
 
