@@ -137,6 +137,19 @@
     <div class="quote-mark" aria-hidden="true">3L0<br><span style="font-size:.34em;letter-spacing:.08em;color:#78dce1">CONTEXTO → AÇÃO</span></div>
   </div></div></section>
 
+  <section id="casos-de-uso"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Cenários de aplicação · em validação</div><h2>Da conferência de uma mercadoria à revisão de uma divergência.</h2><p>O 3L0 está sendo desenvolvido para apoiar diferentes etapas da operação. Os cenários abaixo descrevem aplicações possíveis; a disponibilidade de cada fluxo depende dos dados, das integrações e da validação em ambiente real.</p></div>
+    <div class="grid3">
+      <article class="card"><div class="icon" aria-hidden="true">▤</div><h3>Recebimento de mercadorias</h3><p>Organize a conferência de itens recebidos e relacione as informações observadas com o registro esperado para facilitar a revisão pela equipe.</p><p class="note">Aplicação inicial em validação.</p></article>
+      <article class="card"><div class="icon" aria-hidden="true">⌗</div><h3>Códigos e cadastro de produtos</h3><p>Use códigos de barras, QR Code ou identificadores informados para procurar correspondências em uma fonte de dados disponível.</p><p class="note">A correspondência depende da qualidade e da cobertura do cadastro.</p></article>
+      <article class="card"><div class="icon" aria-hidden="true">▧</div><h3>Conferência de documentos</h3><p>Considere informações de notas fiscais e outros documentos como contexto para comparar campos relevantes com os dados do produto e do cadastro.</p><p class="note">OCR e fontes fiscais precisam de integração e validação específicas.</p></article>
+      <article class="card"><div class="icon" aria-hidden="true">↔</div><h3>Divergências e dados ausentes</h3><p>Destaque valores que não correspondem, informações incompletas e casos que exigem revisão humana, sem confundir falha técnica com divergência real.</p><p class="note">Regras e critérios precisam ser definidos para cada operação.</p></article>
+      <article class="card"><div class="icon" aria-hidden="true">▤</div><h3>Preparação para ERP ou WMS</h3><p>Estruture os dados conferidos para uma futura integração com sistemas de estoque, compras ou gestão, com mapeamento explícito dos campos.</p><p class="note">Conectores externos não são apresentados como já operacionais.</p></article>
+      <article class="card"><div class="icon" aria-hidden="true">✓</div><h3>Revisão e decisão operacional</h3><p>Apresente evidências e o estado da correspondência para que uma pessoa responsável possa revisar e decidir o próximo passo.</p><p class="note">Um resultado automático não comprova, sozinho, identidade física ou autenticidade.</p></article>
+    </div>
+    <p class="note">Transparência: esta seção descreve cenários de uso em desenvolvimento. Não implica que OCR, validação fiscal, persistência compartilhada ou integrações com ERP/WMS já estejam disponíveis em produção.</p>
+  </div></section>
+
   <section id="fluxo"><div class="wrap">
     <div class="section-head"><div class="eyebrow">Como o fluxo funciona</div><h2>O agente conecta as etapas — com evidências e limites.</h2><p>O fluxo pretendido vai da observação à preparação dos dados para uso. O Agente 3L0 ocupa a camada de coordenação: acompanha o que foi extraído, direciona verificações, sinaliza incertezas e prepara o próximo passo sem substituir a validação humana. A execução integral ainda precisa ser comprovada.</p></div>
     <div class="steps">
