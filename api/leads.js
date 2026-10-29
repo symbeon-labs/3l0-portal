@@ -19,6 +19,22 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ error: 'Método não permitido.' });
   }
 
+  // Fail closed until the controller has explicitly approved lead capture and the
+  // public privacy notice identifies the responsible party, contact channel and retention.
+  const privacyApproved = process.env.LEADS_PRIVACY_APPROVED === 'true';
+  const controllerName = (process.env.LEADS_CONTROLLER_NAME || '').trim();
+  const privacyEmail = (process.env.LEADS_PRIVACY_EMAIL || '').trim();
+  const privacyUrl = (process.env.LEADS_PRIVACY_URL || '').trim();
+  const retentionDays = Number(process.env.LEADS_RETENTION_DAYS || 0);
+  let validPrivacyUrl = false;
+  try { validPrivacyUrl = new URL(privacyUrl).protocol === 'https:'; } catch (_) {}
+  if (!privacyApproved || !controllerName || !/^\\S+@\\S+\\.\\S+$/.test(privacyEmail) ||
+      !validPrivacyUrl || !Number.isInteger(retentionDays) || retentionDays < 1 || retentionDays > 3650) {
+    return res.status(503).json({
+      error: 'A captação de solicitações ainda não foi ativada. O aviso de privacidade e as condições de tratamento precisam ser concluídos.'
+    });
+  }
+
   const webhook = process.env.LEADS_WEBHOOK_URL;
   if (!webhook) {
     return res.status(503).json({
