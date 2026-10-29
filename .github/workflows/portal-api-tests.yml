@@ -1,0 +1,36 @@
+name: Portal API tests
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "api/**"
+      - ".github/workflows/portal-api-tests.yml"
+  pull_request:
+    branches: ["main"]
+    paths:
+      - "api/**"
+      - ".github/workflows/portal-api-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portal-api-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  leads-tests:
+    name: Leads endpoint tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run leads API tests
+        run: node --test api/leads.test.js
