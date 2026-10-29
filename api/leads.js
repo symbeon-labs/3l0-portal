@@ -1,4 +1,13 @@
-// Vercel Serverless Function: forwards qualified leads to a privately configured CRM/n8n webhook.
+// Vercel Serverless Function: validates and forwards leads to a privately configured CRM/n8n webhook.
+const USE_CASES = {
+  industry: ['traceability','receiving','quality','records','other'],
+  retail: ['receiving','invoice','catalog','stock','other'],
+  logistics: ['receiving','documents','tracking','exceptions','other'],
+  services: ['documents','records','compliance','integration','other'],
+  health: ['documents','traceability','quality','integration','other'],
+  agribusiness: ['traceability','receiving','documents','quality','other'],
+  other: ['documents','receiving','reconcile','integration','other']
+};
 // Configure LEADS_WEBHOOK_URL in Vercel Project Settings → Environment Variables.
 // Never place the webhook URL or credentials in client-side code.
 module.exports = async function handler(req, res) {
@@ -25,7 +34,11 @@ module.exports = async function handler(req, res) {
     return res.status(503).json({ error: 'O destino de recebimento não está configurado corretamente.' });
   }
 
-  const body = req.body && typeof req.body === 'object' ? req.body : {};
+  const body = req.body && typeof req.body === 'object' && !Array.isArray(req.body) ? req.body : {};
+  // Reject unexpectedly large payloads even when the platform has already parsed the body.
+  if (Buffer.byteLength(JSON.stringify(body), 'utf8') > 16 * 1024) {
+    return res.status(413).json({ error: 'A solicitação excede o tamanho permitido.' });
+  }
   // Honeypot: return a generic success to bots without forwarding anything.
   if (typeof body.website === 'string' && body.website.trim()) {
     return res.status(202).json({ ok: true });
@@ -46,7 +59,8 @@ module.exports = async function handler(req, res) {
       !allowed(body.workflow, ['manual','systems','mixed','outsourced','undefined']) ||
       !allowed(body.volume, ['daily_high','daily','weekly','monthly','pilot']) ||
       !allowed(body.timeline, ['now','quarter','exploring','research']) ||
-      typeof body.useCase !== 'string' || body.useCase.length > 80) {
+      typeof body.useCase !== 'string' || body.useCase.length > 80 ||
+      !USE_CASES[body.sector]?.includes(body.useCase)) {
     return res.status(400).json({ error: 'As respostas de qualificação são inválidas. Recarregue a página e tente novamente.' });
   }
 
