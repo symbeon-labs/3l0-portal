@@ -24,4 +24,12 @@ Superfície institucional pública do ecossistema 3L0 / Symbeon Labs.
 - Se o webhook não estiver configurado ou falhar, a interface não informa falsamente que o lead foi registrado: apresenta uma mensagem de erro.
 - Não armazene segredos no frontend nem encaminhe dados pessoais para analytics público.
 
+### Testes e limites operacionais
+
+- Executar os testes automatizados com `node --test api/leads.test.js` antes do merge.
+- O endpoint rejeita casos de uso incompatíveis com o setor e payloads acima de 16 KiB; os testes cobrem método HTTP, validação cruzada, tamanho do payload, webhook ausente e encaminhamento.
+- Ainda é necessário configurar limitação de taxa e deduplicação com armazenamento compartilhado (por exemplo, Redis/serviço equivalente). Limites apenas em memória não são confiáveis em funções serverless com múltiplas instâncias.
+- Antes da produção, completar o aviso de privacidade com controlador, canal de contato, finalidade, operadores, prazo de retenção e processo de exclusão; não inventar esses dados nem ativar captação real sem eles.
+- Após configurar o webhook, testar entrega real, falha/timeout, repetição e deduplicação no destino.
+
 A implantação da interface, isoladamente, não significa que a captação esteja operacional. Só considerar concluída após testar um envio real até o destino configurado.
