@@ -14,9 +14,11 @@ Transformar o 3L0 em um produto defensável e comercialmente verificável: prote
 ### 1.1 Portal público
 - [x] Manter o Portal como superfície institucional pública.
 - [x] Documentar o gate de privacidade para captação de leads.
+- [x] Registrar a decisão de não introduzir uma segunda base de leads antes de definir governança, infraestrutura e entrega confiável ([ADR-0001](./docs/adr/0001-lead-intake-persistence.md)).
 - [ ] Completar o aviso de privacidade com dados reais do controlador, contato, finalidade, operadores, retenção e exclusão.
 - [ ] Configurar e testar o webhook real sem expor credenciais.
 - [ ] Implementar rate limiting e deduplicação com armazenamento compartilhado antes da captação comercial pública.
+- [ ] Definir contrato de idempotência/entrega durável antes de prometer processamento confiável de leads.
 
 ### 1.2 Vision com acesso controlado
 - [x] Remover a oferta de cadastro público da interface na branch de segurança.
