@@ -28,7 +28,7 @@ module.exports = async function handler(req, res) {
   const retentionDays = Number(process.env.LEADS_RETENTION_DAYS || 0);
   let validPrivacyUrl = false;
   try { validPrivacyUrl = new URL(privacyUrl).protocol === 'https:'; } catch (_) {}
-  if (!privacyApproved || !controllerName || !/^\\S+@\\S+\\.\\S+$/.test(privacyEmail) ||
+  if (!privacyApproved || !controllerName || !/^\S+@\S+\.\S+$/.test(privacyEmail) ||
       !validPrivacyUrl || !Number.isInteger(retentionDays) || retentionDays < 1 || retentionDays > 3650) {
     return res.status(503).json({
       error: 'A captação de solicitações ainda não foi ativada. O aviso de privacidade e as condições de tratamento precisam ser concluídos.'
