@@ -20,7 +20,8 @@ Superfície institucional pública do ecossistema 3L0 / Symbeon Labs.
 - O portal é publicado pela Vercel; o domínio atual é `https://3l0-portal.vercel.app/`.
 - A jornada comercial adapta perguntas conforme o setor, registra papel na decisão, caso de uso, processo atual, frequência e prazo, e gera um resumo de abordagem para vendas.
 - O endpoint `POST /api/leads` valida o consentimento e encaminha o perfil para `LEADS_WEBHOOK_URL` (por exemplo, um webhook privado de n8n/CRM). O endpoint não mantém uma base própria.
-- **Obrigatório antes de ativar a captação em produção:** configurar `LEADS_WEBHOOK_URL` nas Environment Variables da Vercel, apontando para um destino HTTPS controlado pela equipe; testar entrega e tratamento de falhas; publicar aviso de privacidade com URL real; definir acesso, retenção e exclusão dos dados.
+- **Gate de privacidade fail-closed:** além de `LEADS_WEBHOOK_URL`, a API exige `LEADS_PRIVACY_APPROVED=true`, `LEADS_CONTROLLER_NAME`, `LEADS_PRIVACY_EMAIL`, `LEADS_PRIVACY_URL` (HTTPS) e `LEADS_RETENTION_DAYS` (inteiro entre 1 e 3650). Sem todos esses valores válidos, o endpoint responde `503` e não encaminha dados. O sinal de aprovação deve ser ativado somente depois de revisão jurídica e publicação do aviso real.
+- Antes de ativar a captação em produção, testar entrega e falhas; definir acesso, retenção e exclusão; documentar os operadores e a finalidade.
 - Se o webhook não estiver configurado ou falhar, a interface não informa falsamente que o lead foi registrado: apresenta uma mensagem de erro.
 - Não armazene segredos no frontend nem encaminhe dados pessoais para analytics público.
 
@@ -28,7 +29,7 @@ Superfície institucional pública do ecossistema 3L0 / Symbeon Labs.
 
 - Executar os testes automatizados com `node --test api/leads.test.js` antes do merge.
 - O endpoint rejeita casos de uso incompatíveis com o setor e payloads acima de 16 KiB; os testes cobrem método HTTP, validação cruzada, tamanho do payload, webhook ausente e encaminhamento.
-- Ainda é necessário configurar limitação de taxa e deduplicação com armazenamento compartilhado (por exemplo, Redis/serviço equivalente). Limites apenas em memória não são confiáveis em funções serverless com múltiplas instâncias.
+- Limitação de taxa e deduplicação com armazenamento compartilhado (por exemplo, Redis/serviço equivalente) continuam pendentes. Até serem configuradas e testadas, a captação não deve ser promovida para uso comercial público. Limites apenas em memória não são confiáveis em funções serverless com múltiplas instâncias.
 - Antes da produção, completar o aviso de privacidade com controlador, canal de contato, finalidade, operadores, prazo de retenção e processo de exclusão; não inventar esses dados nem ativar captação real sem eles.
 - Após configurar o webhook, testar entrega real, falha/timeout, repetição e deduplicação no destino.
 
